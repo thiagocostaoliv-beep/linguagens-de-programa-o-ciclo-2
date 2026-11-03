@@ -1,0 +1,15 @@
+def eh_primo(numero):
+    if numero < 2:
+        return False
+
+    divisor = 2
+    while divisor * divisor <= numero:
+        if numero % divisor == 0:
+            return False
+        divisor += 1
+
+    return True
+
+
+for numero in range(1, 101):
+    print(f"{numero}: {eh_primo(numero)}")
